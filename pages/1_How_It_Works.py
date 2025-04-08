@@ -5,7 +5,7 @@ st.title("How Vexa Works")
 st.markdown("""
 **Visibility-as-a-Service (VaaS)** is a new model that helps businesses appear contextually inside AI-generated answers — not as ads, but as integrated, relevant knowledge.
 
-### How It Works
+### ⚙️ How It Works
 
 - You submit valuable, informative content through our sponsor portal.
 - Vexa intelligently prepares and qualifies your content for seamless AI integration.
