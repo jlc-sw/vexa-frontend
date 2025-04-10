@@ -24,7 +24,7 @@ with st.form("sponsor_form"):
             "language": language
         }
         try:
-    	    headers = {
+            headers = {
                 "ngrok-skip-browser-warning": "true"
             }
             r = requests.post("https://ca3c-45-146-9-124.ngrok-free.app/submit_content", json=payload, headers=headers)
@@ -34,15 +34,3 @@ with st.form("sponsor_form"):
                 st.error(f"⚠️ Error submitting. Status code: {r.status_code}")
         except Exception as e:
             st.error(f"⚠️ Failed to connect: {e}")
-
-
-
-
-
-
-
-
-
-
-
-
