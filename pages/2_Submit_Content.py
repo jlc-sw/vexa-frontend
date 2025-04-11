@@ -27,7 +27,8 @@ with st.form("sponsor_form"):
             headers = {
                 "ngrok-skip-browser-warning": "true"
             }
-            r = requests.post("https://ca3c-45-146-9-124.ngrok-free.app/submit_content", json=payload, headers=headers)
+            backend_url = "https://767e-45-146-9-124.ngrok-free.app/submit_content"
+            r = requests.post(backend_url, json=payload, headers=headers)
             if r.status_code == 200:
                 st.success("✅ Submission successful!")
             else:
