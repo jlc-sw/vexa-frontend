@@ -22,6 +22,11 @@
 #    st.switch_page("pages/2_Submit_Content.py")
 
 
+import streamlit as st
+from PIL import Image
+
+logo = Image.open("assets/vexa_logo.png")
+
 col1, col2 = st.columns([1, 4])
 with col1:
     st.image(logo, width=80)
