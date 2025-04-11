@@ -8,11 +8,11 @@ logo_path = "assets/vexa_logo.png"
 with open(logo_path, "rb") as image_file:
     encoded_logo = base64.b64encode(image_file.read()).decode()
 
-# === Custom Header with logo + title aligned at bottom ===
+# === Custom Header with larger logo and bottom-aligned title ===
 st.markdown(
     f"""
     <div style="display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem;">
-        <img src="data:image/png;base64,{encoded_logo}" alt="Vexa Logo" width="80"/>
+        <img src="data:image/png;base64,{encoded_logo}" alt="Vexa Logo" width="120"/>
         <h1 style="margin: 0; padding-bottom: 5px;">Welcome to Vexa</h1>
     </div>
     """,
@@ -33,7 +33,8 @@ Vexa connects your brand to next-generation discovery opportunities.
 
 # === Call to Action Button ===
 if st.button("Submit Sponsored Content"):
-    st.switch_page("pages/2_Submit_Content.py")  # Assumes you're using Streamlit multipage
+    st.switch_page("pages/2_Submit_Content.py")
+
 
 
 
