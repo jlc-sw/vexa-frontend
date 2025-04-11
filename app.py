@@ -3,7 +3,7 @@ from PIL import Image
 import os
 
 #st.set_page_config(page_title="Vexa – Visibility-as-a-Service", layout="centered")
-st.set_page_config(page_title="Welcome to Vexa", layout="centered")
+st.set_page_config(page_title="Vexa", layout="centered")
 
 # Safe path loading
 logo_path = os.path.join("assets", "vexa_logo.png")
@@ -14,10 +14,10 @@ if os.path.exists(logo_path):
 else:
     st.warning("⚠️ Logo not found — make sure vexa_logo.png is in /assets folder.")
 
-st.title("Vexa – B2B AI")
+st.title("Welcome to Vexa")
 
 st.markdown("""
-Welcome to **Vexa**, the first platform that helps businesses gain visibility *inside* AI-generated answers.
+Welcome to **Vexa**, the first platform that helps businesses through AI.
 
 > Vexa bridges AI platforms to Business
 
