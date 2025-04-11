@@ -12,7 +12,7 @@ with open(logo_path, "rb") as image_file:
 st.markdown(
     f"""
     <div style="display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem;">
-        <img src="data:image/png;base64,{encoded_logo}" alt="Vexa Logo" width="120"/>
+        <img src="data:image/png;base64,{encoded_logo}" alt="Vexa Logo" width="100"/>
         <h1 style="margin: 0; padding-bottom: 5px;">Welcome to Vexa</h1>
     </div>
     """,
