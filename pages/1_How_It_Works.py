@@ -29,7 +29,7 @@ logo = Image.open("assets/vexa_logo.png")
 
 col1, col2 = st.columns([1, 4])
 with col1:
-    st.image(logo, width=90)
+    st.image(logo, width=120)
 with col2:
     st.markdown("## Welcome to Vexa")
 
