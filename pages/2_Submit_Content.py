@@ -26,7 +26,8 @@ if st.button("Submit Content"):
             "content_title": content_title,
             "content_body": content_body,
             "tags": tags_list,  # converted to list of strings
-            "website_url": website_url,
+            #"website_url": website_url,
+            "url": website_url,
             "language": language
         }
 
