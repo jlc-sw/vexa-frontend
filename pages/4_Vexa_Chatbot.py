@@ -3,8 +3,22 @@ import requests
 import os
 from llm_providers import call_llm
 
-st.set_page_config(page_title="Vexa Chatbot", page_icon="🤖")
-st.title("🤖 Vexa Chatbot Simulator")
+#st.set_page_config(page_title="Vexa Chatbot", page_icon="🤖")
+#st.title("🤖 Vexa Chatbot Simulator")
+
+# Set the tab title and logo (favicon)
+st.set_page_config(
+    page_title="Vexa Chatbot",
+    page_icon="assets/vexa_logo.png"  # 👈 path to your PNG
+)
+
+# Optional: Display the logo in the UI header
+col1, col2 = st.columns([1, 5])
+with col1:
+    st.image("assets/vexa_logo.png", width=80)
+with col2:
+    st.markdown("### Vexa Chatbot Simulator")
+
 
 # Config
 VEXA_API_URL = os.getenv("VEXA_API_URL", "https://your-ngrok-subdomain.ngrok.app/query_sponsored_answer")
