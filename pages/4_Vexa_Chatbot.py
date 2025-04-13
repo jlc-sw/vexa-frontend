@@ -21,7 +21,8 @@ with col2:
 
 
 # Config
-VEXA_API_URL = os.getenv("VEXA_API_URL", "https://your-ngrok-subdomain.ngrok.app/query_sponsored_answer")
+#VEXA_API_URL = os.getenv("VEXA_API_URL", "https://your-ngrok-subdomain.ngrok.app/query_sponsored_answer")
+VEXA_API_URL = os.getenv("VEXA_API_URL", "https://wahoo-rich-egret.ngrok-free.app/query_sponsored_answer")
 DEFAULT_PROVIDER = st.sidebar.selectbox("Choose LLM Provider", ["ollama", "together", "groq", "deepseek"], index=0)
 
 # Chat history state
