@@ -1,6 +1,8 @@
 import requests
 import os
 
+OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://localhost:11434/api/generate")
+
 def call_llm(prompt, provider="ollama"):
     if provider == "ollama":
         return call_ollama(prompt)
@@ -14,7 +16,8 @@ def call_llm(prompt, provider="ollama"):
         return "Unsupported provider."
 
 def call_ollama(prompt):
-    response = requests.post("http://localhost:11434/api/generate", json={
+    response = requests.post(OLLAMA_API_URL, json={
+#response = requests.post("http://localhost:11434/api/generate", json={
         "model": "mistral",
         "prompt": prompt,
         "options": {
