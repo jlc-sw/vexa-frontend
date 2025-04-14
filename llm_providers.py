@@ -1,7 +1,9 @@
 import requests
 import os
 import streamlit as st
+import re
 from together import Together
+
 # Get the key from Streamlit's secrets storage
 together_client = Together(api_key=st.secrets["TOGETHER_API_KEY"])
 
