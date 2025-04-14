@@ -1,10 +1,20 @@
 import requests
 import os
-
+import streamlit as st
 from together import Together
+# Get the key from Streamlit's secrets storage
+together_client = Together(api_key=st.secrets["TOGETHER_API_KEY"])
 
-TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
-together_client = Together(api_key=TOGETHER_API_KEY)
+# Try Streamlit secrets first, then fallback to env var (for local dev)
+try:
+    #import streamlit as st
+    TOGETHER_API_KEY = st.secrets["TOGETHER_API_KEY"]
+except ImportError:
+    TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
+
+
+#TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
+#together_client = Together(api_key=TOGETHER_API_KEY)
 
 OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://localhost:11434/api/generate")
 
