@@ -49,16 +49,28 @@ def call_together(prompt):
             messages=[{"role": "user", "content": prompt}],
         )
         content = response.choices[0].message.content
-
-        # Clean out <think>...</think> tags
-        content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
-        return content 
-
-
-
-        #return response.choices[0].message.content
+        return clean_think_tags(content)
     except Exception as e:
         return f"Error from Together SDK: {str(e)}"
+
+
+#def call_together(prompt):
+#    try:
+#        response = together_client.chat.completions.create(
+#            model="deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+#            messages=[{"role": "user", "content": prompt}],
+#        )
+#        content = response.choices[0].message.content
+#
+#        # Clean out <think>...</think> tags
+#        content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+#        return content 
+#
+#
+#
+#        #return response.choices[0].message.content
+#    except Exception as e:
+#        return f"Error from Together SDK: {str(e)}"
 
 #    headers = {
 #        "Authorization": f"Bearer {os.getenv('TOGETHER_API_KEY')}",
