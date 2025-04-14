@@ -48,7 +48,15 @@ def call_together(prompt):
             model="deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
             messages=[{"role": "user", "content": prompt}],
         )
-        return response.choices[0].message.content
+        content = response.choices[0].message.content
+
+        # Clean out <think>...</think> tags
+        content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+        return content 
+
+
+
+        #return response.choices[0].message.content
     except Exception as e:
         return f"Error from Together SDK: {str(e)}"
 
