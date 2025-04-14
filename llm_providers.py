@@ -28,15 +28,24 @@ def call_ollama(prompt):
     return response.json().get("response", "Error from Ollama")
 
 def call_together(prompt):
-    headers = {
-        "Authorization": f"Bearer {os.getenv('TOGETHER_API_KEY')}",
-        "Content-Type": "application/json"
-    }
-    response = requests.post("https://api.together.xyz/v1/chat/completions", headers=headers, json={
-        "model": "mistralai/Mistral-7B-Instruct-v0.2",
-        "messages": [{"role": "user", "content": prompt}]
-    })
-    return response.json()["choices"][0]["message"]["content"]
+    try:
+        response = together_client.chat.completions.create(
+            model="deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"Error from Together SDK: {str(e)}"
+
+#    headers = {
+#        "Authorization": f"Bearer {os.getenv('TOGETHER_API_KEY')}",
+#        "Content-Type": "application/json"
+#    }
+#    response = requests.post("https://api.together.xyz/v1/chat/completions", headers=headers, json={
+#        "model": "mistralai/Mistral-7B-Instruct-v0.2",
+#        "messages": [{"role": "user", "content": prompt}]
+#    })
+#    return response.json()["choices"][0]["message"]["content"]
 
 def call_groq(prompt):
     headers = {
