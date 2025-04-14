@@ -44,6 +44,10 @@ def call_ollama(prompt):
     })
     return response.json().get("response", "Error from Ollama")
 
+def clean_think_tags(text: str) -> str:
+    # Removes empty <think></think> blocks
+    return re.sub(r"<think>\s*</think>", "", text).strip()
+
 def call_together(prompt):
     try:
         response = together_client.chat.completions.create(
