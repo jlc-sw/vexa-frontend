@@ -11,7 +11,7 @@ st.set_page_config(
 
 # ---------------- sidebar  ----------------
 with st.sidebar:
-    st.image("logo.png", width=160)
+    st.image("assets/vexa_logo.png", width=160)
     page = st.radio("Navigate", ["Home", "Dashboard", "Settings"])
 
 # --------------- main area ----------------
