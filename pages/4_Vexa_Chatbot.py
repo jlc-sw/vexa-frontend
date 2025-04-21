@@ -37,7 +37,7 @@ if user_input:
 
     # Call Vexa backend for sponsor content
     try:
-        vexa_resp = requests.post(VEXA_API_URL, json={"query": user_input})
+        vexa_resp = requests.post(VEXA_API_URL, json={"query": user_input}, headers={"ngrok-skip-browser-warning": "true"})
         vexa_resp.raise_for_status()
         sponsors = vexa_resp.json().get("sponsors", [])
     except Exception as e:
