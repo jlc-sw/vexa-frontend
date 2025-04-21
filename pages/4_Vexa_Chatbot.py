@@ -39,16 +39,23 @@ if user_input:
     try:
         vexa_resp = requests.post(VEXA_API_URL, json={"query": user_input}, headers={"ngrok-skip-browser-warning": "true"})
         vexa_resp.raise_for_status()
-        sponsors = vexa_resp.json().get("sponsors", [])
+#        sponsors = vexa_resp.json().get("sponsors", [])
+        sponsor = vexa_resp.json().get("sponsor_content")
     except Exception as e:
         sponsors = []
         st.error(f"Error fetching sponsor data: {e}")
 
     # Format sponsor content for prompt
     sponsor_text = ""
-    for s in sponsors:
-        sponsor_text += f"- **{s['title']}**: {s['body']}\n({s.get('url', '')})\n"
+    if sponsor:
+        sponsor_text += f"- **{sponsor['title']}**: {sponsor['body']}\n({sponsor.get('url', '')})\n"
+    else:
+        sponsor_text = "No sponsor content found." 
 
+#    sponsor_text = ""
+#    for s in sponsors:
+#        sponsor_text += f"- **{s['title']}**: {s['body']}\n({s.get('url', '')})\n"
+#
     # Build full prompt
     prompt = f"""
 You are a helpful assistant.
