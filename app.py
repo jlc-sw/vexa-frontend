@@ -23,7 +23,7 @@ if page == "Home":
     components.html(
         html,
         height=3300,       # tweak until the whole page fits, or enable scrolling
-        scrolling=True
+        scrolling=False
     )
 
 elif page == "Dashboard":
