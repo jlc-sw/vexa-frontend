@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Powered Advertising Solutions</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4f46e5',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.gradient-text {
+background: linear-gradient(90deg, #4f46e5, #10b981);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=Modern%20abstract%20technology%20background%20with%20AI%20elements%2C%20advertising%20visuals%2C%20data%20visualization%2C%20with%20soft%20blue%20and%20purple%20gradient%2C%20clean%20minimal%20design%20with%20empty%20space%20on%20the%20left%20side%20for%20text%2C%20high%20quality%20professional%203D%20rendering&width=1920&height=1080&seq=1001&orientation=landscape');
+background-size: cover;
+background-position: right center;
+}
+</style>
+</head>
+<body class="min-h-screen bg-gray-50">
+<!-- Header -->
+<header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+<div class="container mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center">
+<a href="#" class="font-['Pacifico'] text-2xl text-primary">logo</a>
+<nav class="hidden md:flex ml-12">
+<a href="#features" class="mx-4 text-gray-700 hover:text-primary transition-colors">Features</a>
+<a href="#benefits" class="mx-4 text-gray-700 hover:text-primary transition-colors">Benefits</a>
+<a href="#technology" class="mx-4 text-gray-700 hover:text-primary transition-colors">Technology</a>
+<a href="#pricing" class="mx-4 text-gray-700 hover:text-primary transition-colors">Pricing</a>
+</nav>
+</div>
+<div class="flex items-center">
+<a href="https://readdy.ai/home/61387c9f-675c-470f-bb3f-4197fe05e284/9fbe475b-c0de-43cc-bb1e-c485df72f6a0" data-readdy="true" class="text-gray-700 hover:text-primary mr-6 transition-colors">Sign In</a>
+<button class="bg-primary text-white px-5 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Sign Up</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full pt-32 pb-20 mt-16">
+<div class="container mx-auto px-6 w-full">
+<div class="flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 bg-white/90 p-10 !rounded-lg shadow-lg backdrop-blur-sm">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+<span class="gradient-text">AI-Powered Advertising Solutions</span>
+</h1>
+<p class="text-lg text-gray-700 mb-8 max-w-xl">
+Revolutionize your marketing strategy with our cutting-edge AI algorithms that optimize ad placement, targeting, and performance in real-time.
+</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors shadow-lg whitespace-nowrap">
+Get Started
+</button>
+<button class="bg-white text-primary border border-primary px-8 py-3 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap">
+Watch Demo
+</button>
+</div>
+<div class="flex mt-12 gap-8">
+<div class="text-center">
+<p class="text-3xl font-bold text-primary">98%</p>
+<p class="text-sm text-gray-600">Accuracy Rate</p>
+</div>
+<div class="text-center">
+<p class="text-3xl font-bold text-primary">2.5x</p>
+<p class="text-sm text-gray-600">ROI Improvement</p>
+</div>
+<div class="text-center">
+<p class="text-3xl font-bold text-primary">500+</p>
+<p class="text-sm text-gray-600">Enterprise Clients</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features -->
+<section id="features" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Our platform combines advanced AI technology with intuitive design to deliver exceptional advertising results.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-8 !rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-brain-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">AI Algorithm Analysis</h3>
+<p class="text-gray-600 mb-4">Our proprietary algorithms analyze millions of data points to identify optimal advertising opportunities in milliseconds.</p>
+<a href="#" class="text-primary flex items-center hover:underline">
+Learn More
+<div class="w-5 h-5 ml-1 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-8 !rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-focus-3-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Smart Ad Targeting</h3>
+<p class="text-gray-600 mb-4">Reach the right audience at the right time with precision targeting based on behavior, demographics, and intent signals.</p>
+<a href="#" class="text-primary flex items-center hover:underline">
+Learn More
+<div class="w-5 h-5 ml-1 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-8 !rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-line-chart-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Performance Analytics</h3>
+<p class="text-gray-600 mb-4">Comprehensive real-time analytics dashboard with actionable insights and automated optimization recommendations.</p>
+<a href="#" class="text-primary flex items-center hover:underline">
+Learn More
+<div class="w-5 h-5 ml-1 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section id="benefits" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Transform Your Advertising Strategy</h2>
+<p class="text-gray-600 mb-8">Our platform delivers measurable results through advanced AI technology and data-driven insights.</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+<i class="ri-rocket-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-1">Increased Conversion Rates</h3>
+<p class="text-gray-600">Average 37% improvement in conversion rates through optimized targeting and placement.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+<i class="ri-funds-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-1">Reduced Ad Spend Waste</h3>
+<p class="text-gray-600">Cut ineffective ad spend by up to 42% while maintaining or improving campaign performance.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-1">Time-Saving Automation</h3>
+<p class="text-gray-600">Reduce campaign management time by 65% with intelligent automation and optimization.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+<i class="ri-bar-chart-grouped-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-1">Data-Driven Insights</h3>
+<p class="text-gray-600">Gain valuable audience and performance insights to continuously refine your strategy.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-white !rounded-lg shadow-lg p-6 overflow-hidden">
+<div class="relative">
+<div class="bg-gray-100 !rounded-lg p-4 mb-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold">Campaign Performance Dashboard</h3>
+<div class="flex">
+<div class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary cursor-pointer">
+<i class="ri-settings-3-line"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary cursor-pointer">
+<i class="ri-download-line"></i>
+</div>
+</div>
+</div>
+<div id="performance-chart" class="h-64 w-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-gray-100 !rounded-lg p-4">
+<p class="text-sm text-gray-500 mb-1">Conversion Rate</p>
+<div class="flex items-end justify-between">
+<p class="text-2xl font-bold">8.7%</p>
+<div class="flex items-center text-green-500">
+<i class="ri-arrow-up-line"></i>
+<span class="text-sm">23%</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-100 !rounded-lg p-4">
+<p class="text-sm text-gray-500 mb-1">Cost per Acquisition</p>
+<div class="flex items-end justify-between">
+<p class="text-2xl font-bold">$12.40</p>
+<div class="flex items-center text-green-500">
+<i class="ri-arrow-down-line"></i>
+<span class="text-sm">18%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-100 !rounded-lg p-4">
+<p class="text-sm text-gray-500 mb-3">Top Performing Audience Segments</p>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-2 h-2 bg-primary !rounded-full mr-2"></div>
+<span class="text-sm">Tech Professionals (25-34)</span>
+</div>
+<span class="text-sm font-medium">32%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-2 h-2 bg-secondary !rounded-full mr-2"></div>
+<span class="text-sm">Marketing Decision Makers</span>
+</div>
+<span class="text-sm font-medium">28%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-2 h-2 bg-yellow-400 !rounded-full mr-2"></div>
+<span class="text-sm">E-commerce Shoppers</span>
+</div>
+<span class="text-sm font-medium">21%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology Stack -->
+<section id="technology" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Technology Stack</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Powered by cutting-edge technologies to deliver exceptional advertising performance.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-blue-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-ai-generate text-blue-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Machine Learning</h3>
+<p class="text-sm text-gray-600">Advanced neural networks for pattern recognition and prediction</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-purple-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-database-2-line text-purple-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Big Data Processing</h3>
+<p class="text-sm text-gray-600">Real-time analysis of massive datasets for insights</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-green-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-user-search-line text-green-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Behavioral Analytics</h3>
+<p class="text-sm text-gray-600">Understanding user intent and preferences</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-red-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-shield-check-line text-red-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Privacy-First Design</h3>
+<p class="text-sm text-gray-600">Compliant with global privacy regulations</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-yellow-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-cloud-line text-yellow-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Cloud Infrastructure</h3>
+<p class="text-sm text-gray-600">Scalable and reliable global deployment</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-indigo-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-code-s-slash-line text-indigo-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">API Integration</h3>
+<p class="text-sm text-gray-600">Seamless connection with your existing tools</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-pink-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-dashboard-3-line text-pink-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Real-time Dashboard</h3>
+<p class="text-sm text-gray-600">Intuitive visualization of campaign performance</p>
+</div>
+<div class="bg-white p-6 !rounded-lg shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100">
+<div class="w-16 h-16 mx-auto bg-orange-50 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-timer-flash-line text-orange-500 ri-2x"></i>
+</div>
+<h3 class="font-semibold mb-2">Automation Engine</h3>
+<p class="text-sm text-gray-600">Intelligent workflow and optimization automation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-20 bg-gradient-to-r from-primary/90 to-primary">
+<div class="container mx-auto px-6 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Advertising Strategy?</h2>
+<p class="text-white/90 mb-10 text-lg">Join hundreds of forward-thinking companies already leveraging our AI-powered platform to achieve exceptional results.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+<button class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-100 transition-colors shadow-lg whitespace-nowrap font-medium">
+Try Demo
+</button>
+<button class="bg-transparent text-white border-2 border-white px-8 py-3 !rounded-button hover:bg-white/10 transition-colors whitespace-nowrap font-medium">
+Contact Sales
+</button>
+</div>
+<div class="mb-10">
+<p class="text-white/80 mb-4 text-sm font-medium">TRUSTED BY INDUSTRY LEADERS</p>
+<div class="flex flex-wrap justify-center gap-8 items-center">
+<div class="flex items-center text-white">
+<i class="ri-microsoft-fill ri-2x mr-2"></i>
+<span class="font-medium">Microsoft</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-amazon-fill ri-2x mr-2"></i>
+<span class="font-medium">Amazon</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-netflix-fill ri-2x mr-2"></i>
+<span class="font-medium">Netflix</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-spotify-fill ri-2x mr-2"></i>
+<span class="font-medium">Spotify</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-uber-fill ri-2x mr-2"></i>
+<span class="font-medium">Uber</span>
+</div>
+</div>
+</div>
+<div class="bg-white/10 p-6 !rounded-lg inline-block">
+<p class="text-white italic mb-4">"Implementing this AI advertising platform increased our conversion rates by 42% while reducing our ad spend by 23%. The ROI has been exceptional."</p>
+<div class="flex items-center justify-center">
+<div class="w-10 h-10 !rounded-full bg-white/20 flex items-center justify-center mr-3">
+<i class="ri-user-3-fill text-white"></i>
+</div>
+<div class="text-left">
+<p class="text-white font-medium">Sarah Johnson</p>
+<p class="text-white/70 text-sm">CMO, TechVision Inc.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="font-['Pacifico'] text-2xl text-white mb-4 inline-block">logo</a>
+<p class="text-gray-400 mb-4">Revolutionizing advertising with AI-powered solutions that deliver exceptional results.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-twitter-x-line"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-linkedin-fill"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-instagram-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Product</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">API Reference</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Company</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
+<p class="text-gray-400 mb-4">Get the latest updates and news directly in your inbox.</p>
+<form class="flex">
+<input type="email" placeholder="Your email address" class="bg-gray-800 text-white px-4 py-2 !rounded-l-button focus:outline-none focus:ring-1 focus:ring-primary w-full border-none">
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+Subscribe
+</button>
+</form>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 AI Advertising Platform. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Performance Chart
+const performanceChart = echarts.init(document.getElementById('performance-chart'));
+const option = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+data: ['Conversions', 'Impressions', 'Click Rate'],
+textStyle: {
+color: '#1f2937'
+}
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+top: '15%',
+containLabel: true
+},
+xAxis: {
+type: 'category',
+boundaryGap: false,
+data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+axisLine: {
+lineStyle: {
+color: '#d1d5db'
+}
+},
+axisLabel: {
+color: '#1f2937'
+}
+},
+yAxis: {
+type: 'value',
+axisLine: {
+lineStyle: {
+color: '#d1d5db'
+}
+},
+axisLabel: {
+color: '#1f2937'
+},
+splitLine: {
+lineStyle: {
+color: '#e5e7eb'
+}
+}
+},
+series: [
+{
+name: 'Conversions',
+type: 'line',
+smooth: true,
+lineStyle: {
+width: 3,
+color: 'rgba(87, 181, 231, 1)'
+},
+areaStyle: {
+color: {
+type: 'linear',
+x: 0,
+y: 0,
+x2: 0,
+y2: 1,
+colorStops: [{
+offset: 0, color: 'rgba(87, 181, 231, 0.2)'
+}, {
+offset: 1, color: 'rgba(87, 181, 231, 0.05)'
+}]
+}
+},
+data: [120, 132, 101, 134, 90, 230, 210]
+},
+{
+name: 'Impressions',
+type: 'line',
+smooth: true,
+lineStyle: {
+width: 3,
+color: 'rgba(141, 211, 199, 1)'
+},
+areaStyle: {
+color: {
+type: 'linear',
+x: 0,
+y: 0,
+x2: 0,
+y2: 1,
+colorStops: [{
+offset: 0, color: 'rgba(141, 211, 199, 0.2)'
+}, {
+offset: 1, color: 'rgba(141, 211, 199, 0.05)'
+}]
+}
+},
+data: [220, 182, 191, 234, 290, 330, 310]
+},
+{
+name: 'Click Rate',
+type: 'line',
+smooth: true,
+lineStyle: {
+width: 3,
+color: 'rgba(251, 191, 114, 1)'
+},
+areaStyle: {
+color: {
+type: 'linear',
+x: 0,
+y: 0,
+x2: 0,
+y2: 1,
+colorStops: [{
+offset: 0, color: 'rgba(251, 191, 114, 0.2)'
+}, {
+offset: 1, color: 'rgba(251, 191, 114, 0.05)'
+}]
+}
+},
+data: [150, 232, 201, 154, 190, 330, 410]
+}
+]
+};
+performanceChart.setOption(option);
+// Responsive chart
+window.addEventListener('resize', function() {
+performanceChart.resize();
+});
+});
+</script>
+</body>
+</html>

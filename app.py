@@ -1,28 +1,35 @@
+# app.py  (landing page)
 import streamlit as st
-from PIL import Image
-import os
+import streamlit.components.v1 as components
+from pathlib import Path
 
-#st.set_page_config(page_title="Vexa – Visibility-as-a-Service", layout="centered")
-st.set_page_config(page_title="Vexa", layout="centered")
+st.set_page_config(
+    page_title="AI‑Powered Advertising",
+    layout="wide",          # or "centered" – either way the sidebar stays
+    initial_sidebar_state="expanded"
+)
 
-# Safe path loading
-logo_path = os.path.join("assets", "vexa_logo.png")
+# ---------------- sidebar  ----------------
+with st.sidebar:
+    st.image("logo.png", width=160)
+    page = st.radio("Navigate", ["Home", "Dashboard", "Settings"])
 
-# Check if the file exists
-if os.path.exists(logo_path):
-    st.image(logo_path, width=120)
-else:
-    st.warning("⚠️ Logo not found — make sure vexa_logo.png is in /assets folder.")
+# --------------- main area ----------------
+if page == "Home":
+    # 1. Read the HTML you showed me earlier
+    html = Path("static/ai_landing.html").read_text(encoding="utf‑8")
 
-st.title("Welcome to Vexa")
+    # 2. Show it in an iframe
+    components.html(
+        html,
+        height=3300,       # tweak until the whole page fits, or enable scrolling
+        scrolling=True
+    )
 
-st.markdown("""
-Welcome to **Vexa**, the first platform that helps businesses through AI.
+elif page == "Dashboard":
+    st.header("📊  Interactive dashboard")
+    # … rest of your Streamlit widgets …
 
-> Vexa bridges AI platforms to Business
-
-**🔗 Use the sidebar to:**
-- Understand how it works
-- Submit your content
-- Explore AI platforms we integrate with
-""")
+elif page == "Settings":
+    st.header("⚙️  Settings")
+    # …
