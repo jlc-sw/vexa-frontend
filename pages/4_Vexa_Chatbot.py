@@ -56,8 +56,38 @@ if user_input:
 #    for s in sponsors:
 #        sponsor_text += f"- **{s['title']}**: {s['body']}\n({s.get('url', '')})\n"
 #
-    # Build full prompt
+#### # Build full prompt # ####
+    # Build full prompt with strong sponsor guidance
+    if sponsor:
+        prompt = f"""
+You are a helpful assistant.
+
+The user asked: \"{user_input}\"
+
+The following is **sponsored content**, matched to this query using Vexa's semantic engine. You **must** include this sponsor in your answer, in a natural and informative way.
+
+---
+**{sponsor['title']}**
+
+{sponsor['body']}
+
+({sponsor.get('url', '')})
+---
+
+Now write a clear, helpful answer to the user's question. Seamlessly include the sponsor content above as part of your response.
+"""
+else:
     prompt = f"""
+You are a helpful assistant.
+
+The user asked: \"{user_input}\"
+
+No sponsor content is available for this query. Just answer helpfully based on your knowledge.
+"""
+
+
+
+#    prompt = f"""
 You are a helpful assistant.
 
 User asked: \"{user_input}\"
@@ -67,7 +97,7 @@ Here is relevant sponsor content:
 
 Please provide a natural, helpful answer that smoothly incorporates the sponsor information.
 """
-
+#
     # Call LLM API
     reply = call_llm(prompt, provider=DEFAULT_PROVIDER)
 
