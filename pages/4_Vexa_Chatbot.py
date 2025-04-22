@@ -58,13 +58,15 @@ if user_input:
 #
 #### # Build full prompt # ####
     # Build full prompt with strong sponsor guidance
+        # Format sponsor content for prompt
+    prompt = ""
     if sponsor:
         prompt = f"""
 You are a helpful assistant.
 
-The user asked: \"{user_input}\"
+The user asked: "{user_input}"
 
-The following is **sponsored content**, matched to this query using Vexa's semantic engine. You **must** include this sponsor in your answer, in a natural and informative way.
+The following is **sponsored content**, matched using Vexa's semantic engine. You **must include this sponsor** in your answer in a helpful and natural way.
 
 ---
 **{sponsor['title']}**
@@ -74,15 +76,15 @@ The following is **sponsored content**, matched to this query using Vexa's seman
 ({sponsor.get('url', '')})
 ---
 
-Now write a clear, helpful answer to the user's question. Seamlessly include the sponsor content above as part of your response.
+Now write a clear, concise, and helpful answer that answers the user and includes the sponsor content above.
 """
-else:
-    prompt = f"""
+    else:
+        prompt = f"""
 You are a helpful assistant.
 
-The user asked: \"{user_input}\"
+The user asked: "{user_input}"
 
-No sponsor content is available for this query. Just answer helpfully based on your knowledge.
+No sponsor content was found for this query. Please answer based on your knowledge.
 """
 
 
