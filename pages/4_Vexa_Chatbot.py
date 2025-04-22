@@ -59,7 +59,7 @@ if user_input:
 #### # Build full prompt # ####
     # Build full prompt with strong sponsor guidance
         # Format sponsor content for prompt
-    prompt = ""
+
     if sponsor:
         prompt = f"""
 You are a helpful assistant.
