@@ -90,15 +90,15 @@ No sponsor content was found for this query. Please answer based on your knowled
 
 
 #    prompt = f"""
-You are a helpful assistant.
-
-User asked: \"{user_input}\"
-
-Here is relevant sponsor content:
-{sponsor_text if sponsor_text else 'No sponsor content found.'}
-
-Please provide a natural, helpful answer that smoothly incorporates the sponsor information.
-"""
+#You are a helpful assistant.
+#
+#User asked: \"{user_input}\"
+#
+#Here is relevant sponsor content:
+#{sponsor_text if sponsor_text else 'No sponsor content found.'}
+#
+#Please provide a natural, helpful answer that smoothly incorporates the sponsor information.
+#"""
 #
     # Call LLM API
     reply = call_llm(prompt, provider=DEFAULT_PROVIDER)
